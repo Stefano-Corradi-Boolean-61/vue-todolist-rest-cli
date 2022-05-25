@@ -1,28 +1,53 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container" >
+   
+    <HeaderComp @addTodo="addTodo" />
+
+    <MainComp :newTodo="newTodo" />
+
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import HeaderComp from './components/HeaderComp.vue';
+import MainComp from './components/MainComp.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HeaderComp,
+    MainComp
+  },
+  data(){
+    return{
+      newTodo: ''
+    }
+  },
+  methods:{
+    addTodo(newTodo){
+      this.newTodo = newTodo;
+      console.log(newTodo);
+    }
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import '~@fontsource/lato/index.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato';
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 </style>

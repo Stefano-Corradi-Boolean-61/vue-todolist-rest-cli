@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "text": "Fare la spesa",
+      "done": true
+    },
+    {
+      "id": 2,
+      "text": "Studiare Vue",
+      "done": true
+    },
+    {
+      "text": "studiare REST",
+      "done": false,
+      "id": 4
+    },
+    {
+      "text": "andare a mangiare!!",
+      "done": false,
+      "id": 5
+    }
+  ]
+}
